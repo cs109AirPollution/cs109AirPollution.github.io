@@ -92,15 +92,18 @@
 <p><b>Relationships Between Pollutants and Other Factors:</b> Given differences in pollutants across these different CBSAs, we can look to see how demographic and weather variables contribute to the observed pollutant concentrations. The following heatmap shows correlations between various predictors and pollutants. The darker the shading, the stronger the relationship -- red indicates a positive relationship and blue an inverse relationship.</p>
 <img src='CorrMat.png' alt='heatmap' height="500px" width="600px" align="middle">
 
+<p><b>Predicting Pollutants</b></p>
+<p>Models were developed to predict pollutant concentrations in cities based on demographic factors and weather. In general, the models were not completely successful, but we could predict NO<sub>2</sub> and ozone with relative accuracy. The predicted values for each observation are plotted against their true values in the figure below.</p>
+<img src='BestModels.png' alt='heatmap' height="300px" width="600px" align="middle">
 
-<h3>
-<a id="Clustering" class="anchor" href="#clustering" aria-hidden="true"><span class="octicon octicon-link"></span></a>Clustering Analysis</h3>
+<p></p>Unfortuantely, these models did not extend well to French cities suggesting limited generalizability and the necessity of other potential predictors to better generate models that will be more generalizable.</p>
+
+<p><b>Clustering of US CBSAs</b></p>
 
 <p> There are four distinct clusters of CBSAs in our data based on their pollutant profiles across the six key pollutants.  These clusters were found using multiple iterations of k-means on the 80 CBSAs with complete pollutant data.
 These color-coded clusters are shown on the map below.	
 </p>
 
-<p><b>Clustering of US CBSAs</b></p>
 <iframe src="https://public.tableau.com/profile/publish/CBSAClusters/Sheet1#!/publish-confirm
 ?:embed=yes&:tabs=yes&:toolbar=yes" width="800" height="500" scrolling="no" align="middle"></iframe> 
 <p>  These clusters are statisitically significantly different in terms of pollutant profiles with PM10 and NO2 levels most significantly differentiating the clusters.
