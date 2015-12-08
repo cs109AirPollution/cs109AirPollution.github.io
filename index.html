@@ -90,9 +90,29 @@
 
 <p><b>Relationships Between Pollutants and Other Factors:</b> Given differences in pollutants across these different CBSAs, we can look to see how </p>
 
-<p><b>Clustering of US cities</b></p>
+
+<h3>
+<a id="Clustering" class="anchor" href="#clustering" aria-hidden="true"><span class="octicon octicon-link"></span></a>Clustering Analysis</h3>
+
+<p> There are four distinct clusters of CBSAs in our data based on their pollutant profiles across the six key pollutants.  These clusters were found using multiple iterations of k-means on the 80 CBSAs with complete pollutant data.
+These color-coded clusters are shown on the map below.	
+</p>
+
+<p><b>Clustering of US CBSAs</b></p>
 <iframe src="https://public.tableau.com/profile/publish/CBSAClusters/Sheet1#!/publish-confirm
 ?:embed=yes&:tabs=yes&:toolbar=yes" width="800" height="500" scrolling="no" align="middle"></iframe> 
+<p>  These clusters are statisitically significantly different in terms of pollutant profiles with PM10 and NO2 levels most significantly differentiating the clusters.
+Graphically one can see these differences below.
+<img src='clustering_profiles.png' alt='profiles'>
+It was of interest to determine if these four clusters differ significantly in predictors of air pollution such as weather patterns, commuting patterns, and/or population variables.
+Statistical testing showed that these clusters differ in their profiles of determinants with land area, average air pressure, average yearly temperature, and average yearly precipitation significantly differentiating the clustering.
+Differences in these determinants can be seen below.
+<img src='clustering_weather.png' alt='weather'>
+<img src='clustering_population.png' alt='population'>
+<img src='clustering_commuting.png' alt='commuting'>
+</p>
+
+
 
 <h3>
 <a id="future-directions" class="anchor" href="#future-directions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future Directions</h3>
