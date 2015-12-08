@@ -26,7 +26,7 @@
           	<a href="http://cs109AirPollution.github.io/#key-findings">Key Findings</a>&nbsp&nbsp&nbsp
 	        <a href="http://cs109AirPollution.github.io/#analysis">Analysis</a>&nbsp&nbsp&nbsp
 	        <a href="http://cs109AirPollution.github.io/#future-directions">Future Directions</a>&nbsp&nbsp&nbsp
-	    	<a href="http://cs109AirPollution.github.io/#data-sources">Data Sources</a>&nbsp&nbsp&nbsp
+	    	<a href="http://cs109AirPollution.github.io/#data-sources">Data</a>&nbsp&nbsp&nbsp
 	     	<a href="http://cs109AirPollution.github.io/#nav-git-repo">Navigating Github Repo</a>&nbsp&nbsp&nbsp
 	       	</h3>
 
@@ -66,9 +66,10 @@
 
 <p><ul>
 	<li>Aiborn NO<sub>2</sub>, PM2.5, and O<sub>3</sub> of cities can be somewhat predicted based on demographic and weather features, but PM10, CO, and SO<sub>2</sub> are not well described from these characteristics</li>
-	<li>The relative importance of anthropogenic and environmental factors in air pollutant concentrations varies between pollutants</li>
+	<li>Prediction models do not extend well to French cities</li>
+	<li>The relative importance of anthropogenic and environmental factors to air pollutant concentrations varies between pollutants</li>
 	<li>Distinct types of cities exist that can be characterized by their particular pollutant profiles</li>
-	<li>Extenstion of models to European data...</li>
+	<li>Something about how French cities don't map well to the US profiles?</li>
 </ul>
 </p>
 
@@ -80,7 +81,7 @@
 <h3>
 <a id="analysis" class="anchor" href="#exploratory-data-analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Analysis</h3>
 
-<p><b>Pollutant Data:</b> The six main pollutants included in our analyis are distributed somewhat differently across the US. The interactive visualization allows you to toggle through the six pollutants to get a sense of how they are distributed. NO<sub>2</sub> shows clear concentrations in more urban areas which is to be expected. O<sub>3</sub> concentrations are higher in western areas where temperatures are higher and weather is drier. PM2.5 may have higher concentrations in the midwest where there is more natural dust in the air. PM10 levels are higher out west. There are other patterns that can be found simply by toggling through the 6 pollutants.</p>
+<p><b>Pollutant Data:</b> The six main pollutants included in our analyis are distributed somewhat differently across the US. The interactive visualization allows you to toggle through the six pollutants to get a sense of how they are distributed. NO<sub>2</sub> shows clear concentrations in more urban areas which is to be expected as a primary source is car exhaust. O<sub>3</sub> concentrations are higher in western areas where temperatures are higher and weather is drier -- consistent with known factors contributing to ozone levels. PM2.5 may have higher concentrations in the midwest and PM10 levels are higher in the southwest. There are other patterns that can be found simply by toggling through the 6 pollutants.</p>
 <iframe src="https://public.tableau.com/profile/publish/PollutantsAcrossUS/Sheet1#!/publish-confirm
 ?:embed=yes&:tabs=yes&:toolbar=yes" width="800" height="500" scrolling="no" align="middle"></iframe> 
 
@@ -88,7 +89,8 @@
 <iframe src="https://public.tableau.com/profile/publish/PublicTransit/Sheet1#!/publish-confirm
 ?:embed=yes&:tabs=yes&:toolbar=yes" width="800" height="500" scrolling="no" align="middle"></iframe> 
 
-<p><b>Relationships Between Pollutants and Other Factors:</b> Given differences in pollutants across these different CBSAs, we can look to see how </p>
+<p><b>Relationships Between Pollutants and Other Factors:</b> Given differences in pollutants across these different CBSAs, we can look to see how demographic and weather variables contribute to the observed pollutant concentrations. The following heatmap shows correlations between various predictors and pollutants. The darker the shading, the stronger the relationship -- red indicates a positive relationship and blue an inverse relationship.</p>
+<img src='heatmap.png' alt='weather'  height="600" width="300">
 
 
 <h3>
@@ -103,13 +105,13 @@ These color-coded clusters are shown on the map below.
 ?:embed=yes&:tabs=yes&:toolbar=yes" width="800" height="500" scrolling="no" align="middle"></iframe> 
 <p>  These clusters are statisitically significantly different in terms of pollutant profiles with PM10 and NO2 levels most significantly differentiating the clusters.
 Graphically one can see these differences below.
-<img src='clustering_profiles.png' alt='profiles'>
+<img src='clustering_profiles.png' alt='profiles'  height="600" width="300">
 It was of interest to determine if these four clusters differ significantly in predictors of air pollution such as weather patterns, commuting patterns, and/or population variables.
 Statistical testing showed that these clusters differ in their profiles of determinants with land area, average air pressure, average yearly temperature, and average yearly precipitation significantly differentiating the clustering.
 Differences in these determinants can be seen below.
-<img src='clustering_weather.png' alt='weather'>
-<img src='clustering_population.png' alt='population'>
-<img src='clustering_commuting.png' alt='commuting'>
+<img src='clustering_weather.png' alt='weather' height="600" width="300">
+<img src='clustering_population.png' alt='population' height="600" width="300">
+<img src='clustering_commuting.png' alt='commuting' height="600" width="300">
 </p>
 
 
@@ -125,7 +127,7 @@ Differences in these determinants can be seen below.
 </ol>
 
 <h3>
-<a id="data-sources" class="anchor" href="#data-sources" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Sources</h3>
+<a id="data-sources" class="anchor" href="#data-sources" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data</h3>
 <p>In order to assess the various factors that may influence air quality in urban areas across the United States, 4 main data sources were required:</p>
 <ol>
   <li>Air Quality Data</li>
@@ -151,8 +153,8 @@ Differences in these determinants can be seen below.
   <li>DataCollection&Cleaning.ipynb</li>
   <li>ExplotatoryDataAnalysis.ipynb</li>
   <li>PredictiveLinearModeling.ipynb </li>
-  <li>UnsupervisedAnalysisPart1.ipynb</li>
-  <li>UnsupervisedAnalysisPart2.ipynb</li>
+  <li>UnsupervisedAnalysis.ipynb</li>
+  <li>UnsupervisedAnalysis_pt2.ipynb</li>
 </ol> 
 
       </section>
