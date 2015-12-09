@@ -128,10 +128,11 @@ Differences in these determinants can be seen below.</p>
 <h3>
 <a id="future-directions" class="anchor" href="#future-directions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future Directions</h3>
 
-<p>The analysis presented here is not without limitations. Our best predictive model could only explain about 45% of the variation in ozone leaving much unexplained. Furthermore, in validating these predictive models we saw that in general models built on US data did not perform well in France. In the future, steps what would be helpful would be to:</p>
+<p>The analysis presented here is not without limitations. Our best predictive model could only explain about 45% of the variation in ozone leaving much unexplained. Furthermore, in validating these predictive models we saw that in general models built on US data did not perform well in France. Beyond the predictive modeling, issues with missing data for pollutants made clustering cities into distinct pollutant profiles challenging. In the future, steps what would be helpful would be to:</p>
 <ol>
 	<li>Collect more predictors -- this includes more weather data, data on land use (agricultural, industrial, commerical, forested, etc.), government air quality regulations, and better transportation information for the validation dataset, </li>
-	<li>Expand beyond the year 2010 to see if there are historical trends in what explains air quality</li>
+	<li>Expand beyond the year 2010 to see if there are historical trends in air quality</li>
+	<li>Incorporate city-specific data rather than using CBSA units via a hierarchical model to account for localized variation in pollutant levels</li>
 	<li>Expand to other countries to see if models generalize better in particular areas</li>
 	<li>Improve imputation of cities with missing pollutant data to increase coverage of clusters across the US</li>
 	<li>Low sample size and low variablity limited our conclusions from the clustering of French cities.  Thus we would want to increase the number of cities in our clustering by including ones from across Europe. </li>
