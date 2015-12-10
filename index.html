@@ -50,7 +50,7 @@
 
 <p>The World Health Organization reported that in 2012 about 7 million people died as a result of air pollution exposure, a finding that was more than double previous estimates.  According to the WHO, this finding “confirms that air pollution is now the world’s largest single environmental health risk.”  Air pollution can lead to a variety of potentially fatal conditions such as heart disease, stroke, COPD, and lung cancer.  Thus it is critical that more research on air pollution causes and interventions to reduce such pollution be done.</p>
  
-<p></p>As students at the Harvard T.H. Chan School of Public Health, we want to conduct some research into air pollution in the USA as well as on some of the determinants of such pollution such as weather, commuting, and population density given the severity of this public health issue.  By understanding the pollutant profiles of various cities, more targeted and effective interventions for reducing pollution on a by-pollutant-type basis could then be proposed and implemented.  Linking these specific profiles to certain determinants would also aid in the creation of powerful air pollution reduction policies.  These various analyses could be useful for developing legislation across the USA.  Additionally, we could predict the pollutant profiles of cities in the third world, where such measuring of pollutants is not available, based on weather, population, etc.  Such prediction would allow for better formulation of air pollution reduction policies for those cities.</p>
+<p></p>As students at the Harvard T.H. Chan School of Public Health, we wanted to conduct some research into air pollution in the USA as well as on some of the determinants of such pollution such as weather, commuting, and population density given the severity of this public health issue.  By understanding the pollutant profiles of various cities, more targeted and effective interventions for reducing pollution on a by-pollutant-type basis could then be proposed and implemented.  Linking these specific profiles to certain determinants would also aid in the creation of powerful air pollution reduction policies.  These various analyses could be useful for developing legislation across the USA.  Additionally, we could predict the pollutant profiles of cities in the third world, where such measuring of pollutants is not available, based on weather, population, etc.  Such prediction would allow for better formulation of air pollution reduction policies for those cities.</p>
 <p><b>Initial Questions:</b></p>
 <ul>
 	<li>Are there certain pollutant profiles that characterize groups of US cities?</li>
@@ -68,11 +68,11 @@
 <p>Based on our analysis, air quality appears to be a composite of many features, some related to human activity and some related to environmental sources. The relative contribution of these two sources seems to vary across pollutants which has implications about how to design effective overall air quality interventions. Using multiple modeling approaches, we find that some pollutant concentrations, such as NO<sub>2</sub> and O<sub>3</sub>, are easier to predict than others. Additionally, US cities can be clustered into distinct pollutant profiles which are differentiated by environmental and demographic factors.</p>
 
 <p><ul>
-	<li>Airborne NO<sub>2</sub>, PM2.5, and O<sub>3</sub> of cities can be somewhat predicted based on demographic and weather features, but PM10, CO, and SO<sub>2</sub> are not well described from these characteristics</li>
-	<li>Prediction models based on US cities do not extend well to French cities for the pollutants that we can best predict</li>
-	<li>The relative importance of anthropogenic and environmental factors to air pollutant concentrations varies between pollutants</li>
-	<li>Distinct types of cities exist that can be characterized by their particular pollutant profiles</li>
-		<ul><li>These clusters can be differentiated by liquid precipitation, air pressure, temperature, and land area
+	<li>Airborne NO<sub>2</sub>, PM2.5, and O<sub>3</sub> of cities can be somewhat predicted based on demographic and weather features, but PM10, CO, and SO<sub>2</sub> are not well described from these characteristics.</li>
+	<li>Prediction models based on US cities do not extend well to French cities for the pollutants that we can best predict.</li>
+	<li>The relative importance of anthropogenic and environmental factors to air pollutant concentrations varies between pollutants.</li>
+	<li>Distinct types of cities exist that can be characterized by their particular pollutant profiles.</li>
+		<ul><li>These clusters can be differentiated by liquid precipitation, air pressure, temperature, and land area.
 		</li></ul>
 	<li>Differential patterns of missing pollutant data for US cities made imputation of clusters unreliable.</li>
 	<li>When French cities were clustered with the same method, their pollutant profiles looked reasonably similar to the clustered US pollutant profiles.  </li>
@@ -107,19 +107,20 @@
 <p><b>Anthropogenic vs. Natural Contributions:</b> Understanding the relative contribution of anthropogenic and demographic factors to understanding pollution levels has implications for designing appropriate regulation. To address this question, we developed multivariate models using Generalized Estimating Equations (GEE) for the most promising pollutants, NO<sub>2</sub> and ozone. In general, the contributions of different weather and demographic variables differ based on the particular pollutant making interventions to target overall air quality challenging.</p>
 <img src='Inference.png' alt='inference' height='300px' width='600px' aligh='middle'>
 
-<p><b>Clustering of US CBSAs:</b> There are four distinct clusters of CBSAs in our data based on their pollutant profiles across the six key pollutants.  These clusters were found using multiple iterations of k-means on the 80 CBSAs with complete pollutant data.
-These color-coded clusters are shown on the map below.	
+<p><b>Clustering of US CBSAs:</b> There are four distinct clusters of CBSAs in our data based on their pollutant profiles across the six key pollutants of NO<sub>2</sub>, PM2.5, O<sub>3</sub>, PM10, CO, and SO<sub>2</sub>.  
+These clusters were found using multiple iterations of k-means on the 80 CBSAs with complete pollutant data.
+The color-coded clusters are shown on the map below.	
 </p>
 
 <iframe src="https://public.tableau.com/profile/publish/CBSAClusters/Dashboard1#!/publish-confirm
 ?:embed=yes&:tabs=yes&:toolbar=yes" width="800" height="600" scrolling="no" align="middle"></iframe> 
 <p>  These clusters are statisitically significantly different in terms of pollutant profiles with PM10 and NO2 levels most significantly differentiating the clusters.
-Graphically one can see these differences below.</p>
+The below graph allows you to see how the clusters differ in terms of the mean level of the pollutants. </p>
 <img src='clustering_profiles.png' alt='profiles'  height="400" width="800" align="middle">
 
 <p>It was of interest to determine if these four clusters differ significantly in predictors of air pollution such as weather patterns, commuting patterns, and/or population variables.
 Statistical testing showed that these clusters differ in their profiles of determinants with land area, average air pressure, average yearly temperature, and average yearly precipitation significantly differentiating the clustering.
-Differences in these determinants can be seen below.</p>
+You can see the differences in these determinants among clusters in the below graphs.</p>
 <img src='clustering_weather.png' alt='weather' height="400" width="800" align="middle">
 <img src='clustering_population.png' alt='population' height="400" width="800" align="middle">
 <img src='clustering_commuting.png' alt='commuting' height="400" width="800" align="middle">
@@ -143,7 +144,7 @@ Differences in these determinants can be seen below.</p>
 <a id="data-sources" class="anchor" href="#data-sources" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data</h3>
 <p>All raw data can be found at the following dropbox <a href="https://www.dropbox.com/sh/cd95rdgrbm9cpz7/AAAG9758zR1tUMvGsxKtIJzXa?dl=0">link</a></p>
 
-<p>In order to assess the various factors that may influence air quality in urban areas across the United States, 4 main data sources were required:</p>
+<p>In order to assess the various factors that may influence air quality in urban areas across the United States, four main data sources were required:</p>
 <ol>
   <li>Air Quality Data</li>
   <li>Historical Weather Data</li>
@@ -151,7 +152,7 @@ Differences in these determinants can be seen below.</p>
   <li>Transit Data</li>
 </ol> 
 <p><b>Air Quality Data:</b></p>
-<p>Air Quality Data for the various Core-Based Statistical Areas (CBSA's) across the United States were obtained from the EPA's <a href="http://aqsdr1.epa.gov/aqsweb/aqstmp/airdata/download_files.html/">AirData</a> repository. Data was downloaded for the 6 key pollutants for the year of 2010. T</p>
+<p>Air Quality Data for the various Core-Based Statistical Areas (CBSA's) across the United States were obtained from the EPA's <a href="http://aqsdr1.epa.gov/aqsweb/aqstmp/airdata/download_files.html/">AirData</a> repository. Data was downloaded for the six key pollutants for the year of 2010.</p>
 <p><b>Historical Weather Data:</b></p>
 <p>US weather data was also obtained from the EPA's <a href="http://aqsdr1.epa.gov/aqsweb/aqstmp/airdata/download_files.html/">AirData</a> repository. This includes information of daily temperature, wind speeds, relative humidity, and atmospheric pressure. A secondary source of weather data came from the National Oceanic and Atmospheric Administration (NOAA). Using their <a href="ftp://ftp.ncdc.noaa.gov/pub/data/">FTP site</a>, more detailed breakdown of weather data including wind speeds, temperature, atmospheric pressure, and daily precipitation could be obtained for various stations across the US. This helped fill in missing data and get a finer image of US weather. </p>
 <p><b>Demographic Data:</b></p>
