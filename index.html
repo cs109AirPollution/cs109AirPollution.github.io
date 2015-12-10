@@ -56,17 +56,13 @@
 	<li>Are there certain pollutant profiles that characterize groups of US cities?</li>
 	<li>What is the distribution of pollutants (air particulate matter, gas levels, etc.) within these clusters?</li>
 	<li>What are the determinants (weather, demographics, transportation, etc.) of these pollutant profiles?</li>
-	<li>Can we use data on weather, demographics, transportation, etc. to predict a city’s pollutant profiles?</li>
-	<li>Can specific policy recommendations be made based on a city’s pollutant profile?</li>
+	<li>Can we use data on weather, demographics, and transportation to predict pollutant concentrations of cities in the US?</li>
 </ul>
 
 <p><i>Note: In this analysis we use the word city to refer to a core-based statistical area (CBSA) which is defined as an urban center of at least 10,000 people and the adjacent areas that are tied to the city by commuting</i></p>
 
 <h3
 <a id="key-findings" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Key Findings</h3>
-<p><b>DELETE THIS PARAGRAPH AND JUST LEAVE BULLETS?</b></p>
-<p>Based on our analysis, air quality appears to be a composite of many features, some related to human activity and some related to environmental sources. The relative contribution of these two sources seems to vary across pollutants which has implications about how to design effective overall air quality interventions. Using multiple modeling approaches, we find that some pollutant concentrations, such as NO<sub>2</sub> and O<sub>3</sub>, are easier to predict than others. Additionally, US cities can be clustered into distinct pollutant profiles which are differentiated by environmental and demographic factors.</p>
-
 <p><ul>
 	<li>Airborne NO<sub>2</sub>, PM2.5, and O<sub>3</sub> of cities can be somewhat predicted based on demographic and weather features, but PM10, CO, and SO<sub>2</sub> are not well described from these characteristics.</li>
 	<li>Prediction models based on US cities do not extend well to French cities for the pollutants that we can best predict.</li>
@@ -74,7 +70,7 @@
 	<li>Distinct types of cities exist that can be characterized by their particular pollutant profiles.</li>
 		<ul><li>These clusters can be differentiated by liquid precipitation, air pressure, temperature, and land area.
 		</li></ul>
-	<li>Differential patterns of missing pollutant data for US cities made imputation of clusters unreliable.</li>
+	<li>Imputation of cluster identities for US cities with missing data allows us to increase the coverage of the country, and seems to be fairly reliable.</li>
 	<li>When French cities were clustered with the same method, their pollutant profiles looked reasonably similar to the clustered US pollutant profiles.  </li>
 
 </ul>
@@ -104,7 +100,7 @@
 
 <p></p>Unfortunately, these models did not extend well to French cities suggesting limited generalizability and the necessity of other potential predictors to better generate models that will be more generalizable.</p>
 
-<p><b>Anthropogenic vs. Natural Contributions:</b> Understanding the relative contribution of anthropogenic and demographic factors to understanding pollution levels has implications for designing appropriate regulation. To address this question, we developed multivariate models using Generalized Estimating Equations (GEE) for the most promising pollutants, NO<sub>2</sub> and ozone. In general, the contributions of different weather and demographic variables differ based on the particular pollutant making interventions to target overall air quality challenging.</p>
+<p><b>Anthropogenic vs. Natural Contributions:</b> Understanding the relative contribution of anthropogenic and demographic factors to pollution concentrations has implications for designing appropriate regulation. To address this question, we developed multivariate models using Generalized Estimating Equations (GEE) for the most promising pollutants, NO<sub>2</sub> and ozone. In general, the contributions of different weather and demographic variables differ based on the particular pollutant making interventions to target overall air quality challenging.</p>
 <img src='Inference.png' alt='inference' height='300px' width='600px' aligh='middle'>
 
 <p><b>Clustering of US CBSAs:</b> There are four distinct clusters of CBSAs in our data based on their pollutant profiles across the six key pollutants of NO<sub>2</sub>, PM2.5, O<sub>3</sub>, PM10, CO, and SO<sub>2</sub>.  
@@ -125,6 +121,7 @@ You can see the differences in these determinants among clusters in the below gr
 <img src='clustering_population.png' alt='population' height="400" width="800" align="middle">
 <img src='clustering_commuting.png' alt='commuting' height="400" width="800" align="middle">
 
+<p><b>Expanding Clusters to More US CBSAs:</b> As we were only able to cluster the 80 CBSAs with complete pollutant data in generating the profiles above, we applied K-Nearest Neighbors to impute the cluster label of cities that were missing data for 1 or 2 pollutants. In theory, the CBSA should get the label that most of the cities with similar concentrations of pollutants. When this was done, we were able to increase our number of CBSAs in a cluster from 80 to 186. The visual below shows the increase. </p>
 
 
 <h3>
